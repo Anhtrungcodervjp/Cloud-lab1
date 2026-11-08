@@ -1,0 +1,421 @@
+
+/* =========================
+   1. GLOBAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    line-height: 1.7;
+    background-color: #ffffff;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   2. HEADER & NAVIGATION
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #172554;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+    padding: 90px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    color: #172554;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero-description {
+    max-width: 500px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+.primary-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #1d4ed8;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* =========================
+   4. GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-light {
+    background-color: #f8fafc;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    color: #172554;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #64748b;
+}
+
+/* =========================
+   5. ABOUT ME
+========================= */
+
+.about-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    color: #172554;
+}
+
+.student-id {
+    color: #2563eb;
+    font-weight: 700;
+    margin: 4px 0 12px;
+}
+
+.course-tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 12px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================
+   6. CONTENT CARD
+========================= */
+
+.content-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    color: #475569;
+}
+
+/* =========================
+   7. CLOUD SERVICES
+========================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.service-number {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #172554;
+    font-size: 28px;
+}
+
+.service-name {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 5px 0 15px;
+}
+
+.service-card > p:not(.service-name) {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.example {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 14px;
+    color: #475569;
+}
+
+/* =========================
+   8. DEPLOYMENT
+========================= */
+
+.deployment-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+}
+
+.deployment-icon {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background-color: #dbeafe;
+    color: #2563eb;
+    font-size: 42px;
+}
+
+.deployment-card h3 {
+    color: #172554;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.deployment-card p {
+    color: #64748b;
+}
+
+.status-label {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 12px;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================
+   9. FOOTER
+========================= */
+
+.footer {
+    padding: 28px 0;
+    text-align: center;
+    background-color: #172554;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+/* =========================
+   10. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card,
+    .deployment-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-card {
+        padding: 25px;
+    }
+
+    .content-card {
+        padding: 25px;
+    }
+}
